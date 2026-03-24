@@ -1,4 +1,3 @@
-from pydantic_ai import Agent
 from src.models import EditedArticle
 from src.substack.client import SubstackClient
 from src.model_factory import create_agent

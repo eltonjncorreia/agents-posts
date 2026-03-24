@@ -1,4 +1,3 @@
-from pydantic_ai import Agent
 from src.sources import fetch_all_sources
 from src.model_factory import create_agent
 
