@@ -37,7 +37,7 @@ Pipeline multi-agente para buscar, resumir e publicar conteúdo na Substack como
 
 4. Execute o pipeline localmente:
    ```bash
-   uv run src/main.py
+   uv run -m src.main
    ```
 
 ## Estrutura do Projeto
@@ -100,4 +100,4 @@ produzir_substack/
 ## Licença
 
 Este projeto está sob a licença MIT. Veja o arquivo `LICENSE` para mais detalhes.
->>>>>>> master
+
