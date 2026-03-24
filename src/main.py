@@ -12,15 +12,15 @@ def main():
         research_result = researcher.run_sync(topic)
         breakpoint()  # Para depuração, pode ser removido depois
 
-        print(f"Editando artigos para: {topic}")
-        editor = editor_agent()
-        edited_article = editor.run_sync(research_result)
+        # print(f"Editando artigos para: {topic}")
+        # editor = editor_agent()
+        # edited_article = editor.run_sync(research_result)
 
-        print(f"Publicando rascunho para: {topic}")
-        publisher = publisher_agent()
-        publish_result = publisher.run_sync(edited_article)
+        # print(f"Publicando rascunho para: {topic}")
+        # publisher = publisher_agent()
+        # publish_result = publisher.run_sync(edited_article)
 
-        print(f"Rascunho publicado: {publish_result['url']}")
+        # print(f"Rascunho publicado: {publish_result['url']}")
 
 
 if __name__ == "__main__":

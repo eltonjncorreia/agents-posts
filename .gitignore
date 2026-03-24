@@ -143,6 +143,9 @@ venv/
 ENV/
 env.bak/
 venv.bak/
+.env.local
+__pycache__/
+.pytest_cache/*
 
 # Spyder project settings
 .spyderproject

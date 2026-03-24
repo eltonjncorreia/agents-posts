@@ -1,5 +1,5 @@
 from pydantic_settings import BaseSettings
-from typing import List
+from typing import List, Optional
 
 
 class Settings(BaseSettings):
@@ -11,10 +11,19 @@ class Settings(BaseSettings):
     serpapi_key: str
     newsapi_key: str
     rss_feeds: List[str]
-    llm_model: str  # Modelo LLM (ex: 'gpt-4', 'ollama')
+    
+    # LLM Configuration
+    llm_provider: str = "google"  # google, openai, anthropic, xai
+    llm_model: str = "gemini-2.0-flash"
+    
+    # API Keys for different providers
+    google_api_key: Optional[str] = None
+    openai_api_key: Optional[str] = None
+    anthropic_api_key: Optional[str] = None
+    xai_api_key: Optional[str] = None
 
     class Config:
-        env_file = ".env"
+        env_file = ".env.local"
 
 
 settings = Settings()

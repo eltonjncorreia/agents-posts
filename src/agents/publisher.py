@@ -1,7 +1,7 @@
 from pydantic_ai import Agent
-from src.models import EditedArticle, PublishResult
+from src.models import EditedArticle
 from src.substack.client import SubstackClient
-from src.config import settings
+from src.model_factory import create_agent
 
 
 def publisher_agent():
@@ -13,9 +13,8 @@ def publisher_agent():
             body_html=article.content_html,
         )
 
-    agent = Agent(
+    agent = create_agent(
         system_prompt="Você é responsável por publicar artigos na Substack como rascunhos...",
         tools=[publish_draft],
-        model=settings.llm_model,
     )
     return agent
