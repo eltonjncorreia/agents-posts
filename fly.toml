@@ -1,0 +1,7 @@
+app = "produzir-substack"
+
+[build]
+  dockerfile = "Dockerfile"
+
+[experimental]
+  auto_stop_machines = true

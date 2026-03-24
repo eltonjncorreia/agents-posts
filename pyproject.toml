@@ -1,0 +1,19 @@
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "produzir_substack"
+version = "0.1.0"
+description = "Pipeline multi-agente para Substack com PydanticAI e GitHub Models"
+authors = [{name = "Elton"}]
+requires-python = ">=3.12"
+
+dependencies = [
+  "pydantic-ai",
+  "pydantic-settings",
+  "requests",
+  "feedparser",
+  "python-dotenv"
+]
